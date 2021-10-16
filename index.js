@@ -1,30 +1,113 @@
 // data
 const dataTemplate = {
     header: {
-        urlLogo: "https://avatars.githubusercontent.com/u/79155327?s=96&v=4",
-        apiName: "Api",
+            urlLogo: "https://platzi.com/favicon.ico",
+            apiName: "Api",
     },
     components: [
         {
             id: 1,
             name: "messages",
+            path: null,
+            description: null,
+            methods: {
+                get: {
+                    description: null,
+                    table: [
+                        {
+                            parameter: null,
+                            description: null
+                        }
+                    ]
+                },
+                post: {
+                    description: null,
+                    table: [
+                        {
+                            parameter: {
+                                name: null,
+                                required: false,
+                            },
+                            description: null
+                        }
+                    ]
+                },
+            },
         },
         {
             id: 2,
             name: "users",
+            path: null,
+            description: null,
+            methods: {
+                get: {
+                    description: null,
+                    table: [
+                        {
+                            parameter: null,
+                            description: null
+                        }
+                    ]
+                },
+                post: {
+                    description: null,
+                    table: [
+                        {
+                            parameter: {
+                                name: null,
+                                required: false,
+                            },
+                            description: null
+                        }
+                    ]
+                },
+            },
         },
         {
             id: 3,
             name: "chats",
-        },{
-            id: 3,
-            name: "chats",
+            path: null,
+            description: null,
+            methods: {
+                get: {
+                    description: null,
+                    table: [
+                        {
+                            parameter: null,
+                            description: null
+                        }
+                    ]
+                },
+                post: {
+                    description: null,
+                    table: [
+                        {
+                            parameter: {
+                                name: null,
+                                required: false,
+                            },
+                            description: null
+                        }
+                    ]
+                },
+            },
         },
     ]
 }
 const dt = dataTemplate;
 
 // ___________________________________________
+
+document.title = dt.header.apiName || "Template API"
+if(dt.header.urlLogo) {
+    var link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+        link = document.createElement('link');
+        link.rel = 'icon';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    link.href = dt.header.urlLogo;
+}
 
 // general services
 
