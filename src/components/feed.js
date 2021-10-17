@@ -1,4 +1,5 @@
 import { $, capitalize } from "../services"
+import actions from "./actions"
 
 const insertDataComponents = (components) => {
     const $feedContentElement = $(".feed_content")
@@ -10,7 +11,7 @@ const insertDataComponents = (components) => {
                     href="/#${component.id}">
                     ${capitalize(component.name)}
                 </a>
-                ${createActions(component.actions)}
+                ${actions(component.actions)}
             </div>
         `)
         $feedContentElement.innerHTML += content
