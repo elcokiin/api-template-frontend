@@ -1,4 +1,5 @@
 import table from "./table.js"
+import { capitalize } from "../services"
 
 const selectClassMethod = (method) => {
     switch (method) {

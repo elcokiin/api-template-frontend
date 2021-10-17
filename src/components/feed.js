@@ -1,3 +1,5 @@
+import { $, capitalize } from "../services"
+
 const insertDataComponents = (components) => {
     const $feedContentElement = $(".feed_content")
     components.forEach(component => {

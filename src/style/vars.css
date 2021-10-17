@@ -1,8 +1,17 @@
 :root {
     --color-header-bg: #161b22;
+    --color-get: #238636;
+    --color-patch: #fca130;
+    --color-delete: #f93e3e;
+    --color-post: #1f6feb;
+    --color-default: #8b949e;
+    --color-warning: #f0ad4e;
     --color-principal-text: #c9d1d9;
     --color-header-logo: #f0f6fc;
     --color-bg: #0d1117;
+    --color-accent-fg: #58a6ff;
     --color-scheme: dark;
     --width-components: 20vw;
+    --width-feed: 50%;
+    --font-family-principal: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
 }
