@@ -5,7 +5,6 @@ const insertLogo = (urlLogo, apiName) => {
     let insert
     if(urlLogo) {
         const img = `<img src="${urlLogo}" alt=${apiName} class="head_logo"/>`
-        console.log(img)
         insert = img;
     }
     else {

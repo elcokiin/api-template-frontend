@@ -3,6 +3,7 @@ import "./style/style.css"
 
 import header from "./components/header"
 import componentsApi from "./components/componentsApi"
+import feed from "./components/feed"
 
 document.title = dt.header.apiName || "Template API"
 if(dt.header.urlLogo) {
@@ -17,3 +18,4 @@ if(dt.header.urlLogo) {
 
 header(dt.header)
 componentsApi(dt.components)
+feed(dt)
