@@ -10,14 +10,19 @@ html {
     color-scheme: var(--color-scheme);
     background-color: var(--color-bg);
     color: var(--color-principal-text);
+    font-family: var(--font-family-principal);
     scroll-behavior: smooth;
+    position: relative;
 }
 body {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
     font-size: 14px;
     line-height: 1.5;
+    width: 100%;
+    height: 100%;
 }
 
+/*Header*/
 #header {
     min-height: 30px;
     background-color: var(--color-header-bg);
@@ -26,7 +31,6 @@ body {
     align-items: center;
 }
 
-/*Header*/
 #logo {
     color: var(--color-header-logo);
     text-decoration: none;
@@ -39,6 +43,7 @@ body {
 }
 .header_text {
     font-weight: 600;
+    font-size: 1rem;
     color: var(--color-header-logo);
     white-space: nowrap;
     cursor: pointer;
@@ -48,14 +53,26 @@ body {
 .header_text:hover {
     color: var(--color-principal-text);
 }
+.header_text--list {
+    font-size: 14px;
+}
 
 .header_logo-components {
     margin-left: 30px;
 }
+.header_list {
+    margin-left: 25px;
+    list-style: none;
+}
 
 /*components*/
+
+.header_component {
+    margin-top: 20px;
+}
+
 .header_container-components {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -63,7 +80,6 @@ body {
     background: var(--color-header-bg);
     transform: translate(calc(var(--width-components) * -1));
     transition: 250ms ease-in-out;
-    overflow-y: scroll;
 }
 .header_container-components--active {
     transform: translate(0);
@@ -93,7 +109,126 @@ body {
 
 .header_container-components--content {
     position: absolute;
-    top: 10%;
-    left: 10%;
+    top: 30px;
+    left: 15%;
+}
+#main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.feed {
+    width: var(--width-feed);
+    height: 100%;
+}
+.feed_title {
+    margin-top: 50px;
+}
+.feed_content {
+    padding-left: 20px;
+}
+.feed_content-component {
+    padding-top: 40px;
+}
+.feed_content-title {
+    font-family: var(--font-family-principal);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-accent-fg);
+    text-decoration: none;
+    transition: 150ms ease-in-out;
+}
+.feed_content-title:hover {
+    text-decoration: underline;
+}
+.feed_content-specified {
+    margin-left: 15px;
+}
+.feed_content-specified-head {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+.feed_content-specified-method {
+    padding: 5px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+/* Methods colors*/
+.feed_content-specified-method--get {
+    background-color: var(--color-get);
+}
+.feed_content-specified-method--delete {
+    background-color: var(--color-delete);
+}
+.feed_content-specified-method--post {
+    background-color: var(--color-post);
+}
+.feed_content-specified-method--patch {
+    background-color: var(--color-patch);
+}
+.feed_content-specified-method--default {
+    background-color: var(--color-default);
 }
 
+.table_params-description {
+    width: 100%;
+    margin-top: 30px;
+}
+.table_params-description--item {
+    outline: 1px solid var(--color-principal-text);
+    padding: 10px;
+    text-align: center;
+}
+.required {
+    background-color: rgba(250, 250, 250, 0.1);
+    font-weight: bold;
+    padding: 3px;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+.feed_content-specified-path {
+    margin-left: 10px;
+    background-color: rgba(250, 250, 250, 0.1);
+    font-weight: bold;
+    padding: 3px;
+    border-radius: 4px;
+}
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer--line {
+    width: 90%;
+    height: .1px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    background: var(--color-principal-text);
+    opacity: .5;
+}
+.footer_content {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+.github-icon {
+    background: var(--color-header-logo);
+    border-radius: 100%;
+}
+.copy-right {
+    font-size: 12px;
+}
+
+@media (max-width: 800px) {
+    :root {
+        --width-components: 50vw;
+        --width-feed: 90%;
+    }
+}
